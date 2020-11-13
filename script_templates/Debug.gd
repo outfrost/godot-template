@@ -5,9 +5,3 @@ func _init(game: Game) -> void:
 
 func startup() -> void:
 	pass
-
-func loading_finished() -> void:
-	pass
-
-func level_spawned() -> void:
-	pass
