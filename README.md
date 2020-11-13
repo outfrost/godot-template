@@ -17,6 +17,7 @@ The GitHub Actions workflows use `firebelley/godot-export`, `actions/checkout`, 
 * Debug label for continuous monitoring of arbitrary data
 * `GroupMessenger` for sending notifications to node groups
 * Hook-based debug script template for easier local testing without implementation changes
+* A license which you may or may not want to remove once you start a project ;)
 
 ## Contributing
 
