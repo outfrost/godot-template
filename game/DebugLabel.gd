@@ -22,4 +22,4 @@ func display_impl(s: String):
 static func display(ref, s):
 	var label = ref.get_tree().root.find_node("DebugLabel", true, false) as DebugLabel
 	if label:
-		label.display_impl(s)
+		label.display_impl(str(s))

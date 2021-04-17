@@ -36,7 +36,7 @@ margin_top = -64.0
 margin_right = 512.0
 margin_bottom = -8.0
 grow_vertical = 0
-text = "v0.0.1"
+text = "v0.1.0"
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -123,14 +123,14 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="CreditsPopup"]
-anchor_left = 0.45
-anchor_top = 0.45
-anchor_right = 0.55
-anchor_bottom = 0.55
-margin_left = -256.0
-margin_top = -192.0
-margin_right = 256.0
-margin_bottom = 192.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -430.0
+margin_top = -286.0
+margin_right = 430.0
+margin_bottom = 286.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_styles/panel = ExtResource( 5 )
@@ -144,7 +144,7 @@ anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = 16.0
 margin_right = -8.0
-margin_bottom = -16.0
+margin_bottom = -54.0
 bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -157,5 +157,22 @@ anchor_bottom = 1.0
 margin_left = 8.0
 margin_top = 16.0
 margin_right = -16.0
-margin_bottom = -16.0
+margin_bottom = -54.0
 bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="Button" parent="CreditsPopup/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -176.0
+margin_top = -38.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}

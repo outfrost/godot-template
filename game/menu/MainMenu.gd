@@ -2,9 +2,9 @@ extends Control
 
 signal start_game()
 
-onready var play_button: Button = $VBoxContainer/PlayButton
-onready var credits_button: Button = $VBoxContainer/CreditsButton
-onready var quit_button: Button = $VBoxContainer/QuitButton
+onready var play_button: Button = find_node("PlayButton")
+onready var credits_button: Button = find_node("CreditsButton")
+onready var quit_button: Button = find_node("QuitButton")
 onready var credits_popup: Popup = $CreditsPopup
 
 func _ready() -> void:
