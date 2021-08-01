@@ -8,15 +8,15 @@ The GitHub Actions workflows use `firebelley/godot-export`, `actions/checkout`, 
 
 ## What's included
 
-* Export presets for Linux, Windows, and MacOS
-* GitHub Actions workflows that build the project on version tag and pull request
+* Export presets for Linux, Windows, macOS
+* GitHub Actions workflow that builds the project upon tagging a version (e.g. `v0.1.0`)
 * Main Game scene with a stub `Game` script
 * Main menu template
 * Fade transition screen
 * UI theme template
 * Debug overlay for continuous monitoring of arbitrary data
 * `GroupMessenger` for sending notifications to node groups
-* Hook-based debug script template for easier local testing without implementation changes
+* Hook-based debug script template for easier local testing without changing the implementation
 * A license which you may or may not want to remove once you start a project ;)
 
 ## Contributing
