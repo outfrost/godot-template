@@ -2,7 +2,7 @@ Template repository for new Godot projects
 
 ## Dependencies
 
-This template project uses Godot 3.2.3 stable.
+This template project uses Godot 3.3.2 stable.
 
 The GitHub Actions workflows use `firebelley/godot-export`, `actions/checkout`, and `actions/upload-artifact`.
 
@@ -14,7 +14,7 @@ The GitHub Actions workflows use `firebelley/godot-export`, `actions/checkout`, 
 * Main menu template
 * Fade transition screen
 * UI theme template
-* Debug label for continuous monitoring of arbitrary data
+* Debug overlay for continuous monitoring of arbitrary data
 * `GroupMessenger` for sending notifications to node groups
 * Hook-based debug script template for easier local testing without implementation changes
 * A license which you may or may not want to remove once you start a project ;)
