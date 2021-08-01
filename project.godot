@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Label",
-"class": "DebugLabel",
-"language": "GDScript",
-"path": "res://game/DebugLabel.gd"
-}, {
 "base": "Node",
 "class": "Game",
 "language": "GDScript",
@@ -30,7 +25,6 @@ _global_script_classes=[ {
 "path": "res://game/loading/TransitionScreen.gd"
 } ]
 _global_script_class_icons={
-"DebugLabel": "",
 "Game": "",
 "GroupMessenger": "",
 "TransitionScreen": ""
@@ -41,6 +35,10 @@ _global_script_class_icons={
 config/name="New Game Project"
 run/main_scene="res://game/Game.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DebugOverlay="*res://game/DebugOverlay.tscn"
 
 [debug]
 

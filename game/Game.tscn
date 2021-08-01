@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game/ui-theme/ui_theme.tres" type="Theme" id=1]
-[ext_resource path="res://game/DebugLabel.gd" type="Script" id=2]
 [ext_resource path="res://game/menu/MainMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://game/loading/TransitionScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/Game.gd" type="Script" id=5]
@@ -24,12 +23,3 @@ __meta__ = {
 
 [node name="TransitionScreen" parent="UI" instance=ExtResource( 4 )]
 visible = false
-
-[node name="DebugLabel" type="Label" parent="."]
-margin_right = 75.0
-margin_bottom = 14.0
-text = "DebugLabel"
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
