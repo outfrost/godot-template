@@ -7,9 +7,9 @@
 extends Popup
 
 func _ready() -> void:
-	$Panel/RichTextLabel.connect("meta_clicked", self, "on_meta_clicked")
-	$Panel/RichTextLabel2.connect("meta_clicked", self, "on_meta_clicked")
-	$Panel/CloseButton.connect("pressed", self, "hide")
+	$Panel/RichTextLabel.connect("meta_clicked",Callable(self,"on_meta_clicked"))
+	$Panel/RichTextLabel2.connect("meta_clicked",Callable(self,"on_meta_clicked"))
+	$Panel/CloseButton.connect("pressed",Callable(self,"hide"))
 
 func _input(event: InputEvent) -> void:
 	if !visible:
@@ -21,7 +21,7 @@ func _input(event: InputEvent) -> void:
 func _gui_input(event):
 	if (
 		event is InputEventMouseButton
-		&& event.button_index == BUTTON_LEFT
+		&& event.button_index == MOUSE_BUTTON_LEFT
 		&& !event.is_pressed()
 	):
 		hide()

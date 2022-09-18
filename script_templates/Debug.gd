@@ -6,7 +6,7 @@
 
 var game: Game
 
-func _init(game: Game) -> void:
+func _init(game: Game):
 	self.game = game
 
 func startup() -> void:

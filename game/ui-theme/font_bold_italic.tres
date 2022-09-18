@@ -1,4 +1,4 @@
-[gd_resource type="DynamicFont" format=2]
+[gd_resource type="FontFile" format=2]
 
 [resource]
 size = 24

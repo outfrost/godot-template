@@ -6,7 +6,7 @@
 
 extends Node
 
-onready var label: Label = $DebugLabel
+@onready var label: Label = $DebugLabel
 
 var buffer: String = ""
 

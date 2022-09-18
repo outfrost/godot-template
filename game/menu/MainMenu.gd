@@ -8,15 +8,15 @@ extends Control
 
 signal start_game()
 
-onready var play_button: Button = find_node("PlayButton")
-onready var credits_button: Button = find_node("CreditsButton")
-onready var quit_button: Button = find_node("QuitButton")
-onready var credits_popup: Popup = $CreditsPopup
+@onready var play_button: Button = find_child("PlayButton")
+@onready var credits_button: Button = find_child("CreditsButton")
+@onready var quit_button: Button = find_child("QuitButton")
+@onready var credits_popup: Popup = $CreditsPopup
 
 func _ready() -> void:
-	play_button.connect("pressed", self, "on_play_pressed")
-	credits_button.connect("pressed", self, "on_credits_pressed")
-	quit_button.connect("pressed", self, "on_quit_pressed")
+	play_button.connect("pressed",Callable(self,"on_play_pressed"))
+	credits_button.connect("pressed",Callable(self,"on_credits_pressed"))
+	quit_button.connect("pressed",Callable(self,"on_quit_pressed"))
 
 func on_play_pressed() -> void:
 	emit_signal("start_game")

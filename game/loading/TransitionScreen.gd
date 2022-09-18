@@ -15,13 +15,13 @@ enum AnimationState {
 	FADING_OUT,
 }
 
-export var fade_in_duration: float = 0.5
-export var fade_in_node: NodePath = @"."
-export var fade_out_duration: float = 0.5
-export var fade_out_node: NodePath = @"."
+@export var fade_in_duration: float = 0.5
+@export var fade_in_node: NodePath = @"."
+@export var fade_out_duration: float = 0.5
+@export var fade_out_node: NodePath = @"."
 
-onready var fade_in_control: Control = get_node(fade_in_node)
-onready var fade_out_control: Control = get_node(fade_out_node)
+@onready var fade_in_control: Control = get_node(fade_in_node)
+@onready var fade_out_control: Control = get_node(fade_out_node)
 
 var anim_state = AnimationState.IDLE
 var anim_time: float = 0.0

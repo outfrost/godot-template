@@ -7,10 +7,10 @@
 class_name Game
 extends Node
 
-onready var main_menu: Control = $UI/MainMenu
-onready var transition_screen: TransitionScreen = $UI/TransitionScreen
+@onready var main_menu: Control = $UI/MainMenu
+@onready var transition_screen: TransitionScreen = $UI/TransitionScreen
 
-var debug: Reference
+var debug: RefCounted
 
 func _ready() -> void:
 	if OS.has_feature("debug"):
@@ -19,7 +19,7 @@ func _ready() -> void:
 			debug = debug_script.new(self)
 			debug.startup()
 
-	main_menu.connect("start_game", self, "on_start_game")
+	main_menu.connect("start_game",Callable(self,"on_start_game"))
 
 func _process(delta: float) -> void:
 	DebugOverlay.display("fps %d" % Performance.get_monitor(Performance.TIME_FPS))
