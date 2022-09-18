@@ -49,16 +49,18 @@ text = "[center][/center]"
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.4
-anchor_top = 0.5
-anchor_right = 0.6
-anchor_bottom = 0.9
+anchor_left = 0.5
+anchor_top = 0.55
+anchor_right = 0.5
+anchor_bottom = 0.55
+offset_left = -120.0
+offset_right = 120.0
 grow_horizontal = 2
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_right = 230.0
+offset_right = 240.0
 offset_bottom = 31.0
 text = "Play"
 
@@ -66,7 +68,7 @@ text = "Play"
 unique_name_in_owner = true
 layout_mode = 2
 offset_top = 35.0
-offset_right = 230.0
+offset_right = 240.0
 offset_bottom = 66.0
 disabled = true
 text = "Choose level"
@@ -75,7 +77,7 @@ text = "Choose level"
 unique_name_in_owner = true
 layout_mode = 2
 offset_top = 70.0
-offset_right = 230.0
+offset_right = 240.0
 offset_bottom = 101.0
 disabled = true
 text = "Options"
@@ -84,7 +86,7 @@ text = "Options"
 unique_name_in_owner = true
 layout_mode = 2
 offset_top = 105.0
-offset_right = 230.0
+offset_right = 240.0
 offset_bottom = 136.0
 text = "Credits"
 
@@ -92,7 +94,7 @@ text = "Credits"
 unique_name_in_owner = true
 layout_mode = 2
 offset_top = 140.0
-offset_right = 230.0
+offset_right = 240.0
 offset_bottom = 171.0
 text = "Quit"
 
