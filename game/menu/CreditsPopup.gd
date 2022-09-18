@@ -4,19 +4,19 @@
 # the terms of the Do What The Fuck You Want To Public License, Version 2,
 # as published by Sam Hocevar. See the LICENSE file for more details.
 
-extends Popup
+extends Control
 
 func _ready() -> void:
-	$Panel/RichTextLabel.connect("meta_clicked",Callable(self,"on_meta_clicked"))
-	$Panel/RichTextLabel2.connect("meta_clicked",Callable(self,"on_meta_clicked"))
-	$Panel/CloseButton.connect("pressed",Callable(self,"hide"))
+	$Panel/RichTextLabel.meta_clicked.connect(on_meta_clicked)
+	$Panel/RichTextLabel2.meta_clicked.connect(on_meta_clicked)
+	$Panel/CloseButton.pressed.connect(hide)
 
 func _input(event: InputEvent) -> void:
 	if !visible:
 		return
 	if event.is_action("ui_cancel") && event.is_pressed():
 		hide()
-		get_tree().set_input_as_handled()
+		get_tree().root.set_input_as_handled()
 
 func _gui_input(event):
 	if (

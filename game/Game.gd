@@ -13,13 +13,13 @@ extends Node
 var debug: RefCounted
 
 func _ready() -> void:
-	if OS.has_feature("debug"):
-		var debug_script = load("res://debug.gd")
+	if OS.has_feature("debug") && File.file_exists("res://debug.gd"):
+		var debug_script: GDScript = load("res://debug.gd")
 		if debug_script:
 			debug = debug_script.new(self)
 			debug.startup()
 
-	main_menu.connect("start_game",Callable(self,"on_start_game"))
+	main_menu.start_game.connect(on_start_game)
 
 func _process(delta: float) -> void:
 	DebugOverlay.display("fps %d" % Performance.get_monitor(Performance.TIME_FPS))
