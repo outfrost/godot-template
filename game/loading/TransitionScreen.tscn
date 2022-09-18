@@ -1,29 +1,37 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjbey6bjjepho"]
 
-[ext_resource type="Theme" path="res://game/ui-theme/ui_theme.tres" id="1"]
 [ext_resource type="Script" path="res://game/loading/TransitionScreen.gd" id="2"]
+[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="2_f1wtc"]
 
 [node name="TransitionScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2")
 
 [node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Content" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="Content"]
 visible = false
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -31,5 +39,7 @@ offset_left = 480.0
 offset_top = 360.0
 offset_right = -480.0
 offset_bottom = -360.0
-theme = ExtResource("1")
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_f1wtc")
 text = "Loading ..."

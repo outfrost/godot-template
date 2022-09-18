@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmfdkwcu73843"]
 
+[ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="1_7yq1p"]
 [ext_resource type="Script" path="res://game/menu/CreditsPopup.gd" id="2"]
-[ext_resource type="Theme" path="res://game/ui-theme/ui_theme.tres" id="3"]
 [ext_resource type="Script" path="res://game/menu/MainMenu.gd" id="4"]
 
 [node name="MainMenu" type="Control"]
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3")
+theme = ExtResource("1_7yq1p")
 script = ExtResource("4")
 
 [node name="Background" type="TextureRect" parent="."]
@@ -43,7 +43,6 @@ anchor_left = 0.05
 anchor_top = 0.1
 anchor_right = 0.95
 anchor_bottom = 0.5
-theme = ExtResource("3")
 bbcode_enabled = true
 text = "[center][/center]"
 
@@ -55,7 +54,6 @@ anchor_top = 0.5
 anchor_right = 0.6
 anchor_bottom = 0.9
 grow_horizontal = 2
-theme = ExtResource("3")
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
