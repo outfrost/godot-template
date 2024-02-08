@@ -13,7 +13,7 @@ extends Node
 var debug: RefCounted
 
 func _ready() -> void:
-	if OS.has_feature("debug") && File.file_exists("res://debug.gd"):
+	if OS.has_feature("debug") && FileAccess.file_exists("res://debug.gd"):
 		var debug_script: GDScript = load("res://debug.gd")
 		if debug_script:
 			debug = debug_script.new(self)
