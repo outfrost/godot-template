@@ -2,14 +2,14 @@ Template repository for new Godot projects
 
 ## Dependencies
 
-This template project uses **Godot 4.0 beta 1**.
+This template project uses **Godot 4.2.1**.
 
-The GitHub Actions workflow uses `firebelley/godot-export` and `actions/checkout`.
+The GitHub Actions workflow uses `firebelley/godot-export`, `actions/checkout`, and `ncipollo/release-action`.
 
 ## What's included
 
-* Export presets for Linux, Windows, macOS
-* GitHub Actions workflow that builds the project upon tagging a version (e.g. `v0.1.0`)
+* Export presets for Linux, Windows
+* GitHub Actions workflow that builds the project and creates a release upon tagging a version (e.g. `v0.1.0`)
 * Main Game scene with a stub `Game` script
 * Main menu template
 * Fade transition screen

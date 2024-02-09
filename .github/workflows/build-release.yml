@@ -6,14 +6,14 @@ on:
       - 'v[0-9]+.*'
 
 jobs:
-  export_release_project:
+  export_release:
     # Always use ubuntu-latest for this action
     runs-on: ubuntu-latest
-    name: Export and release project
+    name: Export and create release
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2.4.0
+      uses: actions/checkout@v4.1.1
       # Ensure that we get the entire project history
       with:
         fetch-depth: 0
@@ -24,14 +24,25 @@ jobs:
       run: |
         echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/tags/v}
 
-    - name: Export and release
-      uses: firebelley/godot-export@v3.0.0
+    - name: Write version to version file
+      shell: bash
+      run: |
+        echo "${{ steps.tag_version.outputs.TAG_VERSION }}" > ./version.tres
+
+    - name: Export project
+      uses: firebelley/godot-export@v5.2.1
       with:
-        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/3.4.4/Godot_v3.4.4-stable_linux_headless.64.zip
-        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.4.4/Godot_v3.4.4-stable_export_templates.tpz
+        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_linux.x86_64.zip
+        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_export_templates.tpz
         relative_project_path: ./
-        create_release: true
-        generate_release_notes: true
-        base_version: ${{ steps.tag_version.outputs.TAG_VERSION }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        cache: true
+        archive_output: true
+        archive_root_folder: true
+
+    - name: Create release
+      uses: ncipollo/release-action@1.14.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        generateReleaseNotes: true
+        tag: ${{ github.ref_name }}
+        artifacts: ${{ steps.export.outputs.archive_directory }}/*
