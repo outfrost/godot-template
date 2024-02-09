@@ -12,6 +12,7 @@ The GitHub Actions workflow uses `firebelley/godot-export`, `actions/checkout`, 
 * GitHub Actions workflow that builds the project and creates a release upon tagging a version (e.g. `v0.1.0`)
 * Main Game scene with a stub `Game` script
 * Main menu template
+* Automated version text in the menu, updated inside each GitHub Actions export
 * Fade transition screen
 * UI theme template
 * Debug overlay for continuous monitoring of arbitrary data
