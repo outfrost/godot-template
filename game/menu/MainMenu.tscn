@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmfdkwcu73843"]
+[gd_scene load_steps=5 format=3 uid="uid://dmfdkwcu73843"]
 
 [ext_resource type="Theme" uid="uid://cgpmko4d01n84" path="res://game/ui-theme/theme.tres" id="1_7yq1p"]
 [ext_resource type="Script" path="res://game/menu/CreditsPopup.gd" id="2"]
+[ext_resource type="Script" path="res://game/menu/VersionLabel.gd" id="3_426jp"]
 [ext_resource type="Script" path="res://game/menu/MainMenu.gd" id="4"]
 
 [node name="MainMenu" type="Control"]
@@ -33,8 +34,9 @@ offset_top = -64.0
 offset_right = 512.0
 offset_bottom = -8.0
 grow_vertical = 0
-text = "v0.1.0"
+text = "version"
 vertical_alignment = 2
+script = ExtResource("3_426jp")
 
 [node name="TitleLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -60,42 +62,28 @@ grow_horizontal = 2
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_right = 240.0
-offset_bottom = 31.0
 text = "Play"
 
 [node name="ChooseLevelButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 35.0
-offset_right = 240.0
-offset_bottom = 66.0
 disabled = true
 text = "Choose level"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 70.0
-offset_right = 240.0
-offset_bottom = 101.0
 disabled = true
 text = "Options"
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 105.0
-offset_right = 240.0
-offset_bottom = 136.0
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_top = 140.0
-offset_right = 240.0
-offset_bottom = 171.0
 text = "Quit"
 
 [node name="CreditsPopup" type="Control" parent="."]
