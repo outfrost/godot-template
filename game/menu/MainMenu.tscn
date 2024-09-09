@@ -120,6 +120,7 @@ offset_top = 16.0
 offset_right = -8.0
 offset_bottom = -54.0
 bbcode_enabled = true
+scroll_active = false
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CreditsPopup/Panel"]
 layout_mode = 1
@@ -132,6 +133,7 @@ offset_top = 16.0
 offset_right = -16.0
 offset_bottom = -54.0
 bbcode_enabled = true
+scroll_active = false
 
 [node name="CloseButton" type="Button" parent="CreditsPopup/Panel"]
 layout_mode = 1
