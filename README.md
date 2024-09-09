@@ -2,7 +2,7 @@ Template repository for new Godot projects
 
 ## Dependencies
 
-This template project uses **Godot 4.2.1**.
+This template project uses **Godot 4.3**.
 
 The GitHub Actions workflow uses `firebelley/godot-export`, `actions/checkout`, and `ncipollo/release-action`.
 
@@ -17,6 +17,7 @@ The GitHub Actions workflow uses `firebelley/godot-export`, `actions/checkout`, 
 * UI theme template
 * Debug overlay for continuous monitoring of arbitrary data
 * `Harbinger`, a singleton for sending and subscribing to signal-like messages
+* A couple prototyping/scene design helper scripts
 * Hook-based debug script template for easier local testing without changing the implementation
 * A license which you may or may not want to remove once you start a project ;)
 
