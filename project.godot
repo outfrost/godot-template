@@ -34,6 +34,13 @@ gdscript/warnings/unused_argument=false
 window/size/width=1280
 window/size/height=720
 
+[importer_defaults]
+
+scene={
+"meshes/light_baking": 2,
+"meshes/lightmap_texel_size": 0.1
+}
+
 [input]
 
 menu={
