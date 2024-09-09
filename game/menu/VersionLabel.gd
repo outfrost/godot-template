@@ -9,7 +9,7 @@ func _ready() -> void:
 		push_error("cannot open version file")
 		text = ""
 	else:
-		text = v.rstrip("\n")
+		text = v.rstrip("\n").rstrip("\r")
 
 	if OS.has_feature("debug"):
 		text += " (DEBUG)"

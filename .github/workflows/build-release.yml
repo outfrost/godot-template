@@ -18,22 +18,16 @@ jobs:
       with:
         fetch-depth: 0
 
-      # Job creates release under the same version as the tag
-    - name: Get version from tag
-      id: tag_version
-      run: |
-        echo ::set-output name=TAG_VERSION::${GITHUB_REF#refs/tags/v}
-
     - name: Write version to version file
       shell: bash
       run: |
-        echo "${{ steps.tag_version.outputs.TAG_VERSION }}" > ./version.tres
+        echo "${{ github.ref_name }}" > ./version.tres
 
     - name: Export project
       uses: firebelley/godot-export@v5.2.1
       with:
-        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_linux.x86_64.zip
-        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.2.1/Godot_v4.2.1-stable_export_templates.tpz
+        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.3/Godot_v4.3-stable_linux.x86_64.zip
+        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.3/Godot_v4.3-stable_export_templates.tpz
         relative_project_path: ./
         cache: true
         archive_output: true
